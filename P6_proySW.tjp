@@ -428,5 +428,4 @@ taskreport initialPlan "" {
           alert { tooltip plan.journal
                           != '' "<-query attribute='journal'->" width 150 },
           status { width 150 }
-  scenarios actual
 }
