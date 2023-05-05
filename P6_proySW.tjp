@@ -195,7 +195,7 @@ task WMGame "Web & Mobile Game" {
     }
 
     task tConnectD "Create and connect services"{
-      effort: 20d
+      effort 20d
       actual:effort 25d
       allocate dev2
       depends WMGame.tDeploy.tEvalD
