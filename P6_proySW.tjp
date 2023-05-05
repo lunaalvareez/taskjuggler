@@ -199,7 +199,7 @@ task WMGame "Web & Mobile Game" {
       actual:effort 25d
       allocate dev2
       depends WMGame.tDeploy.tEvalD
-      journalentry 2023-03-20 "Problems with MongoDb connection" {
+      journalentry 2023-05-05 "Problems with MongoDb connection" {
         author dev2
         alert yellow
         summary "Public IPs do not update and it is impossible to access to the database"
@@ -212,6 +212,7 @@ task WMGame "Web & Mobile Game" {
       allocate boss
       allocate dev2
       actual:effort 15d
+      actual:start 2023-06-01
       journalentry 2023-04-13 "Problems with the planned dates" {
         author boss
         alert red
@@ -416,4 +417,16 @@ resourcereport resourceGraph "" {
   # We only like to show leaf tasks for leaf resources.
   hidetask ~(isleaf() & isleaf_())
   sorttasks plan.start.up
+}
+
+taskreport initialPlan "" {
+  scenarios actual
+  headline "Initial plan for project"
+  columns bsi { width 50 title 'WBS' }, name { width 150 },
+          start { width 100 }, end { width 100 },
+          effort { width 100 },
+          alert { tooltip plan.journal
+                          != '' "<-query attribute='journal'->" width 150 },
+          status { width 150 }
+  scenarios actual
 }
