@@ -189,8 +189,8 @@ task WMGame "Web & Mobile Game" {
     depends WMGame.twebF.tGUId
 
     task tEvalD "Cloud Service evaluation and resolution"{
-      effort: 2d
-      actual: 3d
+      effort 2d
+      actual:effort 3d
       allocate dev2
     }
 
