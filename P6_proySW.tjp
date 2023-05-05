@@ -160,7 +160,7 @@ task WMGame "Web & Mobile Game" {
     task tGUId "Mobile GUI Design" {
       effort 9d
       actual:effort 15d
-      allocated dev4
+      allocate dev4
     }
     task tFEc "Mobile Front End Construction" {
       effort 22d
@@ -181,7 +181,7 @@ task WMGame "Web & Mobile Game" {
   }
 
   task tDeployF "Deplyment"{
-    
+
   }
 
   task ttest "Acceptance tests" {
