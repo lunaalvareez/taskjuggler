@@ -180,6 +180,10 @@ task WMGame "Web & Mobile Game" {
     } 
   }
 
+  task tDeployF "Deplyment"{
+    
+  }
+
   task ttest "Acceptance tests" {
       effort 10d
       allocate boss
